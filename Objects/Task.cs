@@ -33,9 +33,9 @@ namespace Todo.Objects
       _instances.Clear();
     }
     public int GetId()
-{
-  return _id;
-}
+    {
+      return _id;
+    }
     public static Task Find(int searchId)
     {
       return _instances[searchId - 1];
