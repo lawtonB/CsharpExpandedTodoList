@@ -50,6 +50,11 @@ namespace ToDoList
         model.Add("category", selectedCategory);
         return View["category.cshtml", model];
       };
+      Post["/categories/{id}"] = parameters => {
+        Category selectedCategory = Category.Find(parameters.id);
+        selectedCategory.Clear();
+        return View["tasks_deleted.cshtml", selectedCategory];
+      };
     }
   }
 }

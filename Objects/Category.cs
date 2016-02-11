@@ -7,7 +7,7 @@ namespace Todo.Objects
     private static List<Category> _instances = new List<Category> {};
     private string _name;
     private int _id;
-    private List<Task> _tasks;
+    private List<Task> _tasks= new List<Task> {};
 
     public Category(string categoryName)
     {
@@ -36,9 +36,9 @@ namespace Todo.Objects
     {
       return _instances;
     }
-    public static void Clear()
+    public void Clear()
     {
-      _instances.Clear();
+      _tasks.Clear();
     }
     public static Category Find(int searchId)
     {

@@ -28,7 +28,7 @@ namespace Todo.Objects
     {
       return _instances;
     }
-    public static void ClearAll()
+    public static void Clear()
     {
       _instances.Clear();
     }
