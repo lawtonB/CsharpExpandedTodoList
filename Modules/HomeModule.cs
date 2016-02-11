@@ -23,6 +23,10 @@ namespace ToDoList
         List<Task> allTasks = Task.GetAll();
         return View["tasks.cshtml", allTasks];
       };
+      Post["/tasks_cleared"] = _ => {
+        Task.ClearAll();
+        return View["tasks_cleared.cshtml"];
+      };
       Get["/tasks/{id}"] = parameters => {
         Task task = Task.Find(parameters.id);
         return View["/task.cshtml", task];
